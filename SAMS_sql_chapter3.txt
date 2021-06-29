@@ -1,0 +1,21 @@
+##Chapter 3
+
+Q1. Write a SQL statement to retrieve all customer names (cust_name) from the Customers table, and display the results sorted from Z to A.
+
+
+SELECT cust_name
+FROM Customers
+ORDER BY cust_name DESC
+
+
+Q2. Write a SQL statement to retrieve customer id (cust_id) and order number (order_num) from the Orders table, and sort the results first by customer id, and then by order date in reverse chronological order.
+
+SELECT cust_id, order_num
+FROM Orders
+ORDER BY cust_id, order_num DESC
+
+Q3. Our fictitious store obviously prefers to sell more expensive items, and lots of them. Write a SQL statement to display the quantity and price (item_price) from the OrderItems table, sorted with the highest quantity and highest price first.
+
+SELECT item_price, quantity
+FROM OrderItems
+ORDER BY item_price DESC
