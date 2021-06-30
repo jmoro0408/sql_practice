@@ -1,0 +1,18 @@
+##Chapter 9
+
+Q1. Write a SQL statement to determine the total number of items sold (using the quantity column in OrderItems).
+
+SELECT SUM(quantity)
+FROM OrderItems
+
+Q2. Modify the statement you just created to determine the total number of products with an id (prod_id) BR01 sold.
+
+SELECT SUM(quantity)
+FROM OrderItems
+WHERE prod_id = 'BR01'
+
+Q3. Write a SQL statement to determine the price (prod_price) of the most expensive item in the Products table which costs no more than 10, name the calculated field max_price.
+
+SELECT MAX(prod_price) AS max_price 
+FROM Products
+WHERE prod_price <=10 

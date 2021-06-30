@@ -1,0 +1,16 @@
+##Chapter 11
+
+Q1. Using a subquery, return a list of customers who bought items priced 10 or more. You’ll want to use the OrderItems table to find the matching order numbers (order_num), and then the Orders table to retrieve the customer id (cust_id) for those matched orders.
+
+
+
+Q2. You need to know the dates when product BR01 was ordered. Write a SQL statement that uses a subquery to determine which orders (in OrderItems) purchased prod_id BR01, and then returns customer id (cust_id) and order date (order_date) for each from the Orders table. Sort the results by order date.
+
+
+Q3.Now let’s make it a bit more challenging. Update the previous challenge to return the customer email (cust_email in the Customers table) for any customers who purchased item with a prod_id of BR01. Hint, this involves the SELECT statement, the innermost one returning order_num from OrderItems, and the middle one returning cust_id from Orders.
+
+Q4.We need a list of customer ids with the total amount they have ordered. Write a SQL statement to return customer id (cust_id in Orders table) and total_ordered using a subquery to return the total of orders for each customer. Sort the results by amount spent from greatest to the least. Hint, you’ve used the SUM() to calculate order totals previously.
+
+Q5.One more. Write a SQL statement that retrieves all product names (prod_name) from the Products table, along with a calculated named quant_sold containing the total number of this item sold (retrieved using a subquery and a SUM(quantity) on the OrderItems table).
+
+

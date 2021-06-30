@@ -1,0 +1,19 @@
+##Chapter 8
+
+
+Q1. Our store is now online and customer accounts are being created. Each user needs a login, and the default login will be a combination of their name and city. Write a SQL statement that returns customer id (cust_id), customer name (cust_name) and user_login which is all upper case and comprised of the first two characters of the customer contact (cust_contact) and the first three characters of the customer city (cust_city). So, for example, my login (Ben Forta living in Oak Park) would be BEOAK. Hint, for this one you’ll use functions, concatenation, and an alias.
+
+SELECT
+	cust_contact,
+	cust_name,
+	CONCAT(UPPER(LEFT(cust_contact, 2)),UPPER(LEFT(cust_city, 3))) AS user_login
+	FROM Customers
+
+
+Q2. Write a SQL statement to return the order number (order_num) and order date (order_date) for all orders placed in January 2020, sorted by order date. You should be able to figure this out based on what you have learned thus far, but feel free to consult your DBMS documentation as needed.
+
+SELECT order_num, order_date
+FROM Orders
+WHERE (YEAR(order_date) = 2020)
+AND (MONTH(order_date) = 1)
+ORDER BY order_date
