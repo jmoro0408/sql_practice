@@ -1,17 +1,15 @@
-##Chapter 16
+##Chapter 17
 
-Q1. USA State abbreviations should always be in upper case. Write a SQL statement to update all USA addresses, both vendor states (vend_state in Vendors) and customer states (cust_state in Customers) so that they are upper case.
+Q1. Add a web site column (vend_web) to the Vendors table. You’ll want a text field big enough to accommodate a URL.
 
-UPDATE Vendors
-SET vend_state = UPPER(vend_state)
-WHERE vend_country = 'USA';
+ALTER TABLE Vendors
+ADD vend_web CHAR(100);
+
+
+Q2. Use UPDATE statements to update Customer records with phone numbers.
+
+ALTER TABLE Customers
+ADD vend_phone INT;
 
 UPDATE Customers
-SET cust_state = UPPER(cust_state)
-WHERE vend_country = 'USA';
-
-Q2. In Lesson 15 Challenge 1 I asked you to add yourself to the Customers table. Now delete yourself. Make sure to use a WHERE clause (and test it with a SELECT before using it in DELETE) or you’ll delete all customers!
-
-
-DELETE FROM Customers
-WHERE cust_name = 'John Doe';
+SET vend_phone = 1000000;
